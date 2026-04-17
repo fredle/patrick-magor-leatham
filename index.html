@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Major Patrick Magor Leatham MC — 10th Royal Hussars</title>
+<meta name="description" content="A tribute to Major Patrick Magor Leatham MC (1914–1951), 10th Royal Hussars (Prince of Wales's Own). Awarded the Military Cross for gallantry at San Savino, Italy, September 1944.">
+<meta name="author" content="The Leatham family">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Major Patrick Magor Leatham MC — 10th Royal Hussars">
+<meta property="og:description" content="A tribute to Major Patrick Magor Leatham MC (1914–1951), awarded the Military Cross for gallantry at San Savino, Italy, September 1944.">
+<meta property="og:image" content="images/medals.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #f4efe6;
+  --cream-deep: #ebe4d5;
+  --paper: #faf7f1;
+  --ink: #1a1814;
+  --ink-soft: #3d3a33;
+  --muted: #6b665c;
+  --rule: #c9c0ae;
+  --accent: #7a1e1e;
+  --accent-soft: #a33838;
+
+  --display: 'Playfair Display', Georgia, serif;
+  --body: 'EB Garamond', Georgia, serif;
+
+  --measure: 34rem;
+  --pad: clamp(1.5rem, 5vw, 4rem);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--body);
+  font-size: 1.19rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  background-image:
+    radial-gradient(ellipse 1200px 800px at 20% -10%, rgba(201, 192, 174, 0.18), transparent 60%),
+    radial-gradient(ellipse 1000px 700px at 100% 110%, rgba(122, 30, 30, 0.06), transparent 60%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Paper texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+main, header, footer, section { position: relative; z-index: 2; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(122, 30, 30, 0.3);
+  transition: border-color 180ms, color 180ms;
+}
+a:hover {
+  color: var(--accent-soft);
+  border-bottom-color: var(--accent-soft);
+}
+
+/* ============================================================ MASTHEAD */
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding: 1rem var(--pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--display);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.masthead .left { font-style: italic; letter-spacing: 0.06em; text-transform: none; font-size: 0.9rem; }
+.masthead .right { font-variant-numeric: tabular-nums; }
+
+/* ============================================================ HERO */
+.hero {
+  padding: clamp(3rem, 9vw, 7rem) var(--pad) clamp(2rem, 6vw, 4.5rem);
+  max-width: 78rem;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2.8rem, 8vw, 6.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 1.4rem;
+}
+.hero h1 .mc {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  font-size: 0.72em;
+  vertical-align: 0.1em;
+  margin-left: 0.25em;
+}
+
+.hero-sub {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+  max-width: 40rem;
+}
+
+.hero-dates {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  font-variant-numeric: oldstyle-nums;
+}
+.hero-dates .mdash { margin: 0 0.4em; color: var(--rule); }
+
+/* ============================================================ LEDE */
+.lede {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--rule);
+}
+.lede p {
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.lede p::first-letter {
+  font-family: var(--display);
+  font-size: 3.8em;
+  font-weight: 500;
+  float: left;
+  line-height: 0.9;
+  margin: 0.06em 0.1em 0 -0.04em;
+  color: var(--accent);
+  font-style: normal;
+}
+
+/* ============================================================ SECTIONS */
+section.content {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) var(--pad);
+  border-bottom: 1px solid var(--rule);
+}
+section.content.wide {
+  max-width: 72rem;
+}
+section.content:last-of-type { border-bottom: none; }
+
+.section-label {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+  max-width: var(--measure);
+}
+
+h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin: 2.2rem 0 0.7rem;
+  letter-spacing: -0.005em;
+}
+
+p { margin-bottom: 1.1em; max-width: var(--measure); }
+p:last-child { margin-bottom: 0; }
+
+.content ul, .content ol {
+  max-width: var(--measure);
+  margin: 0 0 1.3em 1.3em;
+}
+.content li { margin-bottom: 0.45em; }
+
+strong { font-weight: 600; color: var(--ink); }
+em { font-style: italic; }
+
+/* ============================================================ MEDALS */
+.medals-figure {
+  margin: 0 auto 2.5rem;
+  max-width: 60rem;
+}
+.medals-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 2px rgba(26, 24, 20, 0.08),
+    0 8px 24px rgba(26, 24, 20, 0.12);
+}
+.medals-figure figcaption {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.9rem;
+}
+
+.medal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  counter-reset: medal;
+}
+.medal-list li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1.2rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--rule);
+  max-width: 100%;
+}
+.medal-list li:last-child { border-bottom: 1px solid var(--rule); }
+.medal-list li::before {
+  counter-increment: medal;
+  content: counter(medal, upper-roman);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--accent);
+  text-align: right;
+  line-height: 1.4;
+}
+.medal-list .name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.medal-list .desc {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ============================================================ CITATION */
+.citation-figure {
+  margin: 0 auto 2.5rem;
+  max-width: 60rem;
+}
+.citation-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 2px rgba(26, 24, 20, 0.08),
+    0 8px 24px rgba(26, 24, 20, 0.12);
+  background: #fff;
+}
+.citation-figure figcaption {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.9rem;
+}
+
+blockquote.citation {
+  margin: 2rem 0;
+  padding: 1.8rem 2rem 1.8rem 2.2rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(235, 228, 213, 0.45);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: var(--measure);
+}
+blockquote.citation p { max-width: none; margin-bottom: 0.8em; }
+blockquote.citation p:last-child { margin-bottom: 0; }
+blockquote.citation .cite-foot {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================ FACTS */
+dl.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.7rem 2rem;
+  max-width: var(--measure);
+  margin: 0;
+}
+dl.facts dt {
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1rem;
+  padding-top: 0.1rem;
+}
+dl.facts dd {
+  color: var(--ink);
+}
+
+/* ============================================================ TIMELINE */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--measure);
+  border-left: 1px solid var(--rule);
+  padding-left: 1.8rem;
+}
+.timeline li {
+  position: relative;
+  padding: 0.2rem 0 1.6rem;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -2.15rem;
+  top: 0.55rem;
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.timeline .when {
+  display: block;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+  font-variant-numeric: oldstyle-nums;
+}
+.timeline .what {
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+/* ============================================================ PULL QUOTE */
+.pullquote {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.25;
+  color: var(--accent);
+  text-align: center;
+  max-width: 40rem;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  letter-spacing: -0.005em;
+}
+
+/* ============================================================ SOURCES */
+.sources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--measure);
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+.sources li {
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed var(--rule);
+  line-height: 1.5;
+}
+.sources li:last-child { border-bottom: none; }
+.sources .src-title {
+  font-family: var(--display);
+  font-weight: 500;
+  color: var(--ink);
+  display: block;
+  font-size: 1.08rem;
+  margin-bottom: 0.15rem;
+}
+.sources .src-note { color: var(--muted); font-style: italic; font-size: 0.95rem; }
+
+/* ============================================================ FOOTER */
+footer {
+  border-top: 2px solid var(--ink);
+  padding: 3rem var(--pad) 4rem;
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--muted);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+footer .regt {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+footer .motto {
+  font-style: italic;
+  color: var(--accent);
+  margin: 0.5rem 0 1.3rem;
+  font-size: 1rem;
+}
+
+/* ============================================================ RESPONSIVE */
+@media (max-width: 640px) {
+  body { font-size: 1.08rem; }
+  .hero { padding-top: 2.5rem; }
+  .masthead { font-size: 0.72rem; flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+  .masthead .left { font-size: 0.85rem; }
+  blockquote.citation { padding: 1.3rem 1.2rem 1.3rem 1.5rem; font-size: 1.02rem; }
+  dl.facts { grid-template-columns: 1fr; gap: 0.2rem 0; }
+  dl.facts dt { margin-top: 0.8rem; }
+  dl.facts dd { margin-bottom: 0.2rem; }
+  dl.facts dt:first-of-type { margin-top: 0; }
+  .medal-list li { grid-template-columns: 2rem 1fr; gap: 0.8rem; }
+}
+
+/* ============================================================ PRINT */
+@media print {
+  body { background: white; color: black; font-size: 11pt; }
+  body::before { display: none; }
+  .masthead, footer { border-color: #999; }
+  a { color: black; border-bottom: none; }
+  section.content, .hero, .lede { page-break-inside: avoid; }
+}
+
+/* ============================================================ REVEAL
+   Content is visible by default (no-JS friendly). JS adds the .js-ready
+   class to <html>, which arms the reveal animation. */
+.reveal { transition: opacity 900ms ease-out, transform 900ms ease-out; }
+.js-ready .reveal:not(.in) { opacity: 0; transform: translateY(18px); }
+@media (prefers-reduced-motion: reduce) {
+  .js-ready .reveal:not(.in) { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="left">In Memoriam</div>
+  <div class="right">10 R.H. &nbsp;·&nbsp; 1939–45</div>
+</header>
+
+<section class="hero reveal">
+  <div class="hero-eyebrow">Major, 10th Royal Hussars (Prince of Wales's Own)</div>
+  <h1>Patrick&nbsp;Magor<br>Leatham<span class="mc">M.C.</span></h1>
+  <p class="hero-sub">Tank squadron commander of the Italian campaign; decorated for gallantry at San Savino, September 1944.</p>
+  <div class="hero-dates">15 September 1914 <span class="mdash">—</span> 17 August 1951</div>
+</section>
+
+<section class="lede reveal">
+  <p>He led C Squadron of the 10th Royal Hussars up the slope towards the Coriano Ridge on the morning of 5 September 1944. The attack was afterwards called an armoured Balaklava; 1st Armoured Division would lose seventy-nine of its one hundred and forty tanks. For pressing forward into the village of San Savino, knocking out German troop carriers and machine-gun positions, and continuing to command his squadron for twelve hours after a shell blew him to the floor of his tank and broke his ankle, Captain Leatham was awarded the Military Cross. He was thirty years old. He had six years left to live.</p>
+</section>
+
+<section class="content reveal">
+  <div class="section-label">The Medals</div>
+  <h2>A group of six, with miniatures, in the original case.</h2>
+
+  <figure class="medals-figure">
+    <img src="images/medals.png" alt="The full medal group, with miniatures, in a fitted leather case" loading="lazy">
+    <figcaption>The full-size group with matching miniatures, mounted for wear.</figcaption>
+  </figure>
+
+  <p>The medals came down through the family in the fitted leather case in which they had been mounted after the war. They are read from the wearer's right — furthest from the heart — to left, in the order in which he wore them.</p>
+
+  <ol class="medal-list">
+    <li>
+      <div>
+        <span class="name">Military Cross</span>
+        <p class="desc">Awarded for an act of exemplary gallantry against the enemy on land. The GRVI cypher at the centre of the silver cross dates it to the reign of George VI. Gazetted 8 February 1945.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="name">1939–1945 Star</span>
+        <p class="desc">For operational service during the Second World War. The ribbon — dark blue, red, light blue — represents the Royal Navy, Army, and Royal Air Force.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="name">Africa Star, with 8th Army clasp</span>
+        <p class="desc">For operational service in North Africa. The clasp, a silver bar on the ribbon, denotes service under Montgomery's Eighth Army — authorised only for those who fought between the opening of the Second Battle of El Alamein in October 1942 and the Axis surrender in Tunisia in May 1943.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="name">Italy Star</span>
+        <p class="desc">For operational service in the Italian campaign, 1943–1945. The ribbon is the Italian tricolour.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="name">Defence Medal</span>
+        <p class="desc">For non-operational service — typically three years in the United Kingdom, or six months overseas in a non-operational theatre.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="name">War Medal 1939–1945, with oak leaf</span>
+        <p class="desc">For twenty-eight or more days of full-time service. The bronze oak leaf emblem worn on the ribbon signifies a Mention in Despatches — a separate recognition, gazetted in its own right.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="content reveal">
+  <div class="section-label">The Life</div>
+  <h2>A short biography.</h2>
+
+  <p>Patrick Magor Leatham was born on 15 September 1914, the son of Captain Cecil Maxwell Leatham, of the Yorkshire Leatham family — a Quaker banking dynasty with its seat at Wentbridge near Pontefract. His sister, Honor Catherine Leatham, was born in 1912.</p>
+
+  <p>He was commissioned into the 10th Royal Hussars (Prince of Wales's Own), the senior English hussar regiment, raised in 1715. By the outbreak of war in 1939 the regiment had been mechanised and formed part of 2nd Armoured Brigade, 1st Armoured Division, in the Royal Armoured Corps.</p>
+
+  <p>On 6 April 1940 — in the quiet months before the German invasion of France — he married <strong>the Hon. Cecily Eveline Berry</strong>, nineteen years old and daughter of the late Henry Seymour Berry, 1st Baron Buckland. Lord Buckland had been one of three brothers who built an extraordinary industrial and newspaper empire: his elder brother was the 1st Viscount Camrose, proprietor of <em>The Daily Telegraph</em>; his younger brother the 1st Viscount Kemsley, proprietor of <em>The Sunday Times</em>.</p>
+
+  <p>The couple had three sons: <strong>Simon Patrick</strong> (born 9 November 1944, during the Italian campaign), <strong>Philip William</strong> (born 30 August 1946), and <strong>Jonathan Grant</strong> (29 November 1948 – 30 July 2020).</p>
+
+  <p>Patrick served through the North African campaign with Eighth Army — hence the Africa Star with 8th Army clasp — and went on into Italy with the regiment in 1944. He died on 17 August 1951, aged thirty-six. Cecily later remarried, taking the name Taylor; she died in October 1975.</p>
+
+  <dl class="facts">
+    <dt>Born</dt><dd>15 September 1914</dd>
+    <dt>Died</dt><dd>17 August 1951 <em>(aged 36)</em></dd>
+    <dt>Father</dt><dd>Captain Cecil Maxwell Leatham</dd>
+    <dt>Sister</dt><dd>Honor Catherine Leatham (1912–2000)</dd>
+    <dt>Married</dt><dd>6 April 1940, the Hon. Cecily Eveline Berry</dd>
+    <dt>Children</dt><dd>Simon (b. 1944), Philip (b. 1946), Jonathan (1948–2020)</dd>
+    <dt>Regiment</dt><dd>10th Royal Hussars (P.W.O.), Royal Armoured Corps</dd>
+    <dt>Rank</dt><dd>Major</dd>
+    <dt>Honours</dt><dd>Military Cross; Mentioned in Despatches</dd>
+    <dt>Campaigns</dt><dd>North Africa (Eighth Army); Italy</dd>
+  </dl>
+</section>
+
+<section class="content reveal">
+  <div class="section-label">The Citation</div>
+  <h2>San Savino, Italy, 6–7 September 1944.</h2>
+
+  <p>The recommendation for the Military Cross was signed by Patrick's commanding officer, endorsed by Lieutenant Colonel D. R. B. Kaye DSO, and marked <em>"strongly recommended"</em> by Lieutenant-General Sir Richard McCreery, General Officer Commanding, Eighth Army. It was gazetted on 8 February 1945. The original recommendation form is preserved at The National Archives, Kew, as <strong>WO 373/9, item 447</strong>.</p>
+
+  <figure class="citation-figure">
+    <img src="images/mc-citation.png" alt="The original Army Form W.3121 recommending Captain P. M. Leatham for the Military Cross" loading="lazy">
+    <figcaption>Army Form W.3121 — the original recommendation. TNA: WO 373/9.</figcaption>
+  </figure>
+
+  <blockquote class="citation">
+    <p>Captain P. M. Leatham was in command of "C" Squadron during the attack in support of the Infantry on San Savino on September 6th and 7th '44. In spite of very heavy and difficult country, and considerable enemy shelling, he managed to press forward his Squadron, creating great havoc amongst the enemy, knocking out two SPW 1 Troop Carrier, and three MG nests. His Squadron killed and captured a large number of Germans in the village.</p>
+    <p>Captain Leatham was himself blown into the bottom of his tank by an HE shell, breaking his ankle. He continued to command his Squadron for a period of 12 hrs before his Squadron was able to be drawn into Regimental Reserve. At no time did Captain Leatham intimate to his Commanding Officer that he had been injured, until such time as he returned to Night Leaguer.</p>
+    <p>Captain Leatham was an example to his Squadron by his cool and calm attitude and personal bravery.</p>
+    <span class="cite-foot">— Signed by the Commanding Officer, 10th Royal Hussars (P.W.O.)</span>
+  </blockquote>
+</section>
+
+<section class="content reveal">
+  <div class="section-label">The Action</div>
+  <h2>An armoured Balaklava.</h2>
+
+  <p>By the late summer of 1944 the Italian campaign had reached the <strong>Gothic Line</strong> — the last great German defensive position in northern Italy, running from the Ligurian coast across the Apennines to the Adriatic. On the Adriatic flank, British Eighth Army's advance had stalled on the <strong>Coriano Ridge</strong>, a hilly spur that was the final obstacle before Rimini and the open country of the Po Valley beyond.</p>
+
+  <p>On 4 September, Major-General Richard Hull, commanding 1st Armoured Division, was ordered to punch through the southern end of the ridge at the village of <strong>San Savino</strong>. Intelligence suggested the position was lightly held. It was not. On the morning of 5 September, the three armoured regiments of 2nd Armoured Brigade advanced in line: the 9th Lancers on the left, Patrick's <strong>10th Hussars in the centre</strong>, and the Queen's Bays on the right. By evening, carefully sited anti-tank guns had destroyed seventy-nine tanks of the hundred and forty that started the charge. The historian Patrick Mercer has called it an armoured Balaklava. The division was so badly mauled that it was shortly afterwards disbanded.</p>
+
+  <p>Patrick's squadron pressed into the village itself. The citation — terse, understated — is the record of what happened next. He was thirty years old, six months married to his wife and with a two-month-old son he had not yet met. He stayed with his men for twelve hours after the shell knocked him to the floor of his tank, and only at night leaguer, when the squadron was relieved, did he admit that he had been injured.</p>
+
+  <p>A fuller account of the action, the broader Gothic Line battle of which it formed a part, and the tactical failure that produced such heavy losses is given in Patrick Mercer's <a href="https://the-past.com/feature/an-armoured-balaklava-lessons-from-the-gothic-line/" target="_blank" rel="noopener">"An armoured Balaklava: Lessons from the Gothic Line"</a>, <em>Military History Matters</em> (Issue 141, July 2024).</p>
+</section>
+
+<div class="pullquote reveal">
+  "At no time did Captain Leatham intimate to his Commanding Officer that he had been injured."
+</div>
+
+<section class="content reveal">
+  <div class="section-label">The War</div>
+  <h2>A chronology.</h2>
+
+  <ul class="timeline">
+    <li>
+      <span class="when">15 September 1914</span>
+      <span class="what">Patrick Magor Leatham born.</span>
+    </li>
+    <li>
+      <span class="when">Late 1930s</span>
+      <span class="what">Commissioned into the 10th Royal Hussars. The regiment is mechanised, transferring from a cavalry role to 2nd Armoured Brigade, 1st Armoured Division, Royal Armoured Corps.</span>
+    </li>
+    <li>
+      <span class="when">6 April 1940</span>
+      <span class="what">Marries the Hon. Cecily Eveline Berry.</span>
+    </li>
+    <li>
+      <span class="when">November 1941</span>
+      <span class="what">The regiment deploys to North Africa with 2nd Armoured Brigade, equipped with Crusader tanks.</span>
+    </li>
+    <li>
+      <span class="when">1942</span>
+      <span class="what">Operation Crusader; Gazala; Alam el Halfa. The Eighth Army reorganises under Montgomery.</span>
+    </li>
+    <li>
+      <span class="when">23 October – 4 November 1942</span>
+      <span class="what">Second Battle of El Alamein. The regiment captures General von Thoma, the German deputy commander, as the Afrika Korps collapses.</span>
+    </li>
+    <li>
+      <span class="when">May 1943</span>
+      <span class="what">The final Axis surrender in Tunisia. End of the North African campaign.</span>
+    </li>
+    <li>
+      <span class="when">May 1944</span>
+      <span class="what">The 10th Hussars land in Italy with Sherman tanks.</span>
+    </li>
+    <li>
+      <span class="when">5–7 September 1944</span>
+      <span class="what">The attack on San Savino, on the Coriano Ridge. The action for which Patrick is awarded the Military Cross.</span>
+    </li>
+    <li>
+      <span class="when">9 November 1944</span>
+      <span class="what">Simon Patrick Leatham born in England.</span>
+    </li>
+    <li>
+      <span class="when">8 February 1945</span>
+      <span class="what">The Military Cross gazetted in <em>The London Gazette</em>.</span>
+    </li>
+    <li>
+      <span class="when">February – May 1945</span>
+      <span class="what">The regiment fights as dismounted infantry in the Senio pocket, then reverts to armour for the final advance through the Argenta Gap to the Po. Germany surrenders in Italy on 2 May 1945.</span>
+    </li>
+    <li>
+      <span class="when">30 August 1946</span>
+      <span class="what">Philip William Leatham born.</span>
+    </li>
+    <li>
+      <span class="when">29 November 1948</span>
+      <span class="what">Jonathan Grant Leatham born.</span>
+    </li>
+    <li>
+      <span class="when">17 August 1951</span>
+      <span class="what">Patrick dies, aged 36. Philip is four years old.</span>
+    </li>
+  </ul>
+</section>
+
+<section class="content reveal">
+  <div class="section-label">Further Reading</div>
+  <h2>Sources &amp; where to look.</h2>
+
+  <p>This page draws on open sources and on the original Army Form W.3121 held at The National Archives. Researchers wishing to go further may find the following useful.</p>
+
+  <h3>Primary sources</h3>
+  <ul class="sources">
+    <li>
+      <span class="src-title">Recommendation for the Military Cross</span>
+      The National Archives, Kew. <strong>WO 373/9, item 447</strong>. Army Form W.3121. Gazetted <em>London Gazette</em>, 8 February 1945.
+    </li>
+    <li>
+      <span class="src-title">10th Royal Hussars War Diary, Italy, 1944</span>
+      The National Archives, Kew. <strong>WO 170/819</strong>. Covers the San Savino action of 5–7 September 1944. Not currently digitised; consult at Kew in person or through a researcher.
+    </li>
+    <li>
+      <span class="src-title">10th Royal Hussars War Diary, Italy, 1945</span>
+      The National Archives, Kew. <strong>WO 170/4625</strong>.
+    </li>
+  </ul>
+
+  <h3>Published</h3>
+  <ul class="sources">
+    <li>
+      <span class="src-title">The 10th Royal Hussars in the Second World War, 1939–1945</span>
+      Aldershot: Gale and Polden, 1948. 212 pp., illustrated. The authoritative regimental history, almost certainly naming Patrick.
+    </li>
+    <li>
+      <span class="src-title">Patrick Mercer, "An armoured Balaklava: Lessons from the Gothic Line"</span>
+      <em>Military History Matters</em>, Issue 141 (July 2024). A detailed narrative of the action at San Savino. <a href="https://the-past.com/feature/an-armoured-balaklava-lessons-from-the-gothic-line/" target="_blank" rel="noopener">Read online</a>.
+    </li>
+  </ul>
+
+  <h3>Regimental collections</h3>
+  <ul class="sources">
+    <li>
+      <span class="src-title">HorsePower: The Museum of the King's Royal Hussars</span>
+      Peninsula Barracks, Romsey Road, Winchester SO23 8TS. Holds the 10th Royal Hussars regimental collection. <a href="https://horsepowermuseum.co.uk" target="_blank" rel="noopener">horsepowermuseum.co.uk</a>.
+    </li>
+    <li>
+      <span class="src-title">10th Royal Hussars (P.W.O.) Old Comrades' Associations</span>
+      <a href="https://xrh.org.uk" target="_blank" rel="noopener">xrh.org.uk</a> and <a href="https://www.10thhussar.com" target="_blank" rel="noopener">10thhussar.com</a>.
+    </li>
+  </ul>
+
+  <h3>Family portraits</h3>
+  <ul class="sources">
+    <li>
+      <span class="src-title">Bassano Ltd portraits of Simon and Philip Leatham</span>
+      National Portrait Gallery, London. Quarter-plate glass negatives, 23 September 1948 — taken while Patrick was still alive. NPG <em>x78485</em> through <em>x78493</em> and onwards. Prints available through NPG Images at <a href="https://www.npg.org.uk" target="_blank" rel="noopener">npg.org.uk</a>.
+    </li>
+  </ul>
+</section>
+
+<footer>
+  <span class="regt">X Royal Hussars (Prince of Wales's Own)</span>
+  <div>Raised 1715  ·  Amalgamated 1969</div>
+  <div class="motto">Ich Dien</div>
+  <div>Compiled in loving memory by his family, 2026.</div>
+</footer>
+
+<script>
+// Arm the reveal animation only if JS is available.
+document.documentElement.classList.add('js-ready');
+
+// Gentle reveal on scroll
+(function() {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function(el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
