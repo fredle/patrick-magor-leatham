@@ -288,6 +288,83 @@ em { font-style: italic; }
   margin: 0;
 }
 
+/* ============================================================ PORTRAIT */
+.portrait-figure {
+  float: right;
+  width: clamp(14rem, 28vw, 22rem);
+  margin: 0.3rem 0 1.5rem 2rem;
+  shape-outside: inset(0);
+}
+.portrait-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.portrait-figure figcaption {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+/* ============================================================ FAMILY */
+.family-figure {
+  margin: 2.5rem auto;
+  max-width: 60rem;
+}
+.family-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 2px rgba(26, 24, 20, 0.08),
+    0 8px 24px rgba(26, 24, 20, 0.12);
+}
+.family-figure figcaption {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.9rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================================ ARTICLES */
+.article-figure {
+  margin: 2.2rem auto;
+  max-width: 36rem;
+  text-align: center;
+}
+.article-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid var(--rule);
+  background: #fff;
+  padding: 0.6rem;
+  box-shadow:
+    0 1px 2px rgba(26, 24, 20, 0.08),
+    0 6px 18px rgba(26, 24, 20, 0.12);
+}
+.article-figure.narrow { max-width: 22rem; }
+.article-figure.wide { max-width: 42rem; }
+.article-figure figcaption {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.8rem;
+  line-height: 1.45;
+}
+
 /* ============================================================ CITATION */
 .citation-figure {
   margin: 0 auto 2.5rem;
@@ -471,6 +548,12 @@ footer .motto {
   dl.facts dd { margin-bottom: 0.2rem; }
   dl.facts dt:first-of-type { margin-top: 0; }
   .medal-list li { grid-template-columns: 2rem 1fr; gap: 0.8rem; }
+  .portrait-figure {
+    float: none;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto 1.6rem;
+  }
 }
 
 /* ============================================================ PRINT */
@@ -566,6 +649,11 @@ footer .motto {
   <div class="section-label">The Life</div>
   <h2>A short biography.</h2>
 
+  <figure class="portrait-figure">
+    <img src="images/portrait.jpg" alt="Pencil portrait of Patrick ('Paddy') Leatham, signed Mary Ware Scott" loading="lazy">
+    <figcaption>"Paddy" — pencil portrait by Mary Ware Scott.</figcaption>
+  </figure>
+
   <p>Patrick Magor Leatham was born on 15 September 1914, the son of Captain Cecil Maxwell Leatham and Dorothy Grace <em>née</em> Magor — his middle name preserving hers. Through his paternal grandfather, Samuel Gurney Leatham of Hemsworth Hall (1840–1919), he descended from the Yorkshire Leathams, a family of Quaker-origin bankers with their seat at Wentbridge House near Pontefract. His elder sister, Honor Catherine Leatham, had been born in 1912.</p>
 
   <p>He was first commissioned on <strong>31 January 1935</strong> into the 16th/5th Lancers, and transferred on <strong>22 August 1936</strong> to the 10th Royal Hussars (Prince of Wales's Own), the senior English hussar regiment, raised in 1715. Promoted Lieutenant on 31 January 1938, he served with the regiment through its mechanisation from cavalry to 2nd Armoured Brigade, 1st Armoured Division, in the Royal Armoured Corps. He was one of relatively few officers to serve with the regiment unbroken from mobilisation to the last months of the war.</p>
@@ -573,6 +661,11 @@ footer .motto {
   <p>On 6 April 1940 — in the quiet months before the German invasion of France — he married <strong>the Hon. Cecily Eveline Berry</strong>, nineteen years old and daughter of the late Henry Seymour Berry, 1st Baron Buckland. Lord Buckland had been one of three brothers who built an extraordinary industrial and newspaper empire: his elder brother was the 1st Viscount Camrose, proprietor of <em>The Daily Telegraph</em>; his younger brother the 1st Viscount Kemsley, proprietor of <em>The Sunday Times</em>.</p>
 
   <p>The couple had three sons: <strong>Simon Patrick</strong> (born 9 November 1944, during the Italian campaign), <strong>Philip William</strong> (born 30 August 1946), and <strong>Jonathan Grant</strong> (29 November 1948 – 30 July 2020).</p>
+
+  <figure class="family-figure">
+    <img src="images/family-web.jpg" alt="Patrick and Cecily Leatham with their three sons at home, c. 1950" loading="lazy">
+    <figcaption>Patrick and Cecily with their three sons — from left, Simon, Jonathan and Philip — at home, c. 1950. Within a year or so of this portrait being taken, Patrick was dead.</figcaption>
+  </figure>
 
   <p>Through the Western Desert Patrick served as <strong>Technical Adjutant</strong> of the regiment — the officer responsible, with the fitters, for keeping the tanks running and salvaging what could be salvaged under fire. The regimental history singles him out for praise at the Second Battle of El Alamein, where he and the Regimental fitters "carried out running repairs most gallantly while under fire." After Alamein he became Second-in-Command of B Squadron; in Italy he took command of C Squadron, fought the San Savino action described below, and was promoted Major in November 1944, taking over B Squadron for the final offensive through the Argenta Gap to the Po. He is also named in the regimental history's appendix of those <strong>Mentioned in Despatches</strong> — the oak leaf emblem worn on the ribbon of his War Medal.</p>
 
@@ -789,6 +882,40 @@ footer .motto {
 </section>
 
 <section class="content reveal">
+  <div class="section-label">The End</div>
+  <h2>Seagry, August 1951.</h2>
+
+  <p>After the war Patrick and Cecily took <strong>Seagry Manor</strong>, near Chippenham in Wiltshire, and farmed there. In early 1950 he also bought the neighbouring <strong>Seagry House</strong>, which in 1949 had been the scene of a fire in which Clare, Countess Cowley had lost her life. He was people's warden of the village church of St. Mary's, Seagry, and well known across the Beaufort hunting country. He kept five horses and was, by every account, an experienced rider.</p>
+
+  <p>On a Saturday morning in August 1951, riding near his home at Seagry, a horse reared and bucked under him for about twenty yards and threw him; he fell on his head. He was taken to the <strong>Radcliffe Infirmary at Oxford</strong>, where he survived two operations but died on 17 August of concussion, laceration of the brain and a skull fracture. No operation, the pathologist told the coroner, could have saved him. A verdict of death by misadventure was recorded. He was thirty-six. Simon was six, Philip four, Jonathan two.</p>
+
+  <p>The initial notice was carried in the provincial evening press on the following Saturday, 18 August 1951.</p>
+
+  <figure class="article-figure narrow">
+    <img src="images/article-northern-daily-mail.jpg" alt="Newspaper clipping: 'Dies After A Riding Accident'" loading="lazy">
+    <figcaption><em>The Northern Daily Mail</em>, Saturday, 18 August 1951, p. 5.</figcaption>
+  </figure>
+
+  <p>The following Saturday, the <em>Wiltshire Times</em> carried the fuller account of the inquest at Oxford, and of the memorial service held at St. Mary's, Seagry, at which the Rural Dean, the Rev. W. H. Barkwell, spoke of "the deep interest shown by Major Leatham in all the affairs of the village. He was people's warden, and in the last war served with great gallantry, having been wounded on three occasions, and was the holder of the Military Cross."</p>
+
+  <figure class="article-figure">
+    <img src="images/article-inquest.jpg" alt="Newspaper clipping: 'Fatal Fall From Horse — Chippenham Major's Death'" loading="lazy">
+    <figcaption><em>Wiltshire Times</em>, Saturday, 25 August 1951, p. 3.</figcaption>
+  </figure>
+
+  <p>Two months later, the <em>Tatler</em>'s hunting correspondent filed his own short tribute from the Beaufort country.</p>
+
+  <figure class="article-figure wide">
+    <img src="images/article-tatler.jpg" alt="Newspaper clipping: 'The very sad news about Paddy Leatham was a great shock.'" loading="lazy">
+    <figcaption><em>The Tatler and Bystander</em>, 10 October 1951, p. 76 — "Hunting Notes".</figcaption>
+  </figure>
+
+  <blockquote class="citation">
+    <p>Welcome to the Breitmeyers at Didmarton. The very sad news about Paddy Leatham was a great shock. A good friend and a grand sportsman, and sadly missed by all his friends in the Beaufort country and elsewhere.</p>
+  </blockquote>
+</section>
+
+<section class="content reveal">
   <div class="section-label">Further Reading</div>
   <h2>Sources &amp; where to look.</h2>
 
@@ -807,6 +934,18 @@ footer .motto {
     <li>
       <span class="src-title">10th Royal Hussars War Diary, Italy, 1945</span>
       The National Archives, Kew. <strong>WO 170/4625</strong>.
+    </li>
+    <li>
+      <span class="src-title">"Dies After A Riding Accident"</span>
+      <em>The Northern Daily Mail</em>, Saturday, 18 August 1951, p. 5. First press notice of Patrick's death.
+    </li>
+    <li>
+      <span class="src-title">"Fatal Fall From Horse — Chippenham Major's Death"</span>
+      <em>Wiltshire Times</em>, Saturday, 25 August 1951, p. 3. Report of the inquest at Oxford and the memorial service at St. Mary's, Seagry.
+    </li>
+    <li>
+      <span class="src-title">"Hunting Notes"</span>
+      <em>The Tatler and Bystander</em>, 10 October 1951, p. 76. Tribute from the Beaufort hunting country.
     </li>
   </ul>
 
