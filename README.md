@@ -11,7 +11,7 @@ This is a static single-page site. Host anywhere that serves files. Recommended:
 ```
 index.html        The site — single file, no build step
 images/
-  medals.png      The full medal group
+  medals.jpg      The full medal group
   mc-citation.png The original W.3121 recommendation (TNA: WO 373/9)
 README.md
 .nojekyll         Tells GitHub Pages to serve the files as-is
